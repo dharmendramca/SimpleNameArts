@@ -17,7 +17,7 @@ public function design(array $data){
 if(!empty($name) )
  ?><style type="text/css">
  .design {
-  background: url('inc/assets/img/<?php echo isset($data['bg'])?$data['bg']:'d1'; ?>.jpg') <?php echo isset($data['left'])?$data['left']:0; ?>px <?php echo isset($data['right'])?$data['right']:0; ?>px;
+  background: url('<?php echo isset($data['bg'])?$data['bg']:'d1'; ?>.jpg') <?php echo isset($data['left'])?$data['left']:0; ?>px <?php echo isset($data['right'])?$data['right']:0; ?>px;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-weight: bold;
