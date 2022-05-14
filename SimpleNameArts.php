@@ -2,8 +2,9 @@
 /*
 *************************************************
 *************************************************
-Author: Dharmendra Kumar
+    Author: Mr. Dharmendra Kumar
 Author URI: http://www.dharmendramca.wordpress.com
+       GIT: https://github.com/dharmendramca 
 
 Description: SimpleNameArts is a PHP class that can beautify any word.  
 
@@ -14,25 +15,24 @@ class SimpleNameArts{
 
 public function design(array $data){
 
-if(!empty($name) )
+
  ?><style type="text/css">
  .design {
-  background: url('<?php echo isset($data['bg'])?$data['bg']:'d1'; ?>.jpg') <?php echo isset($data['left'])?$data['left']:0; ?>px <?php echo isset($data['right'])?$data['right']:0; ?>px;
+  background: url('<?php echo $data['bg']?$data['bg']:'d0'; ?>.jpg') <?php echo $data['left']?$data['left']:0; ?>px <?php echo $data['right']?$data['right']:0; ?>px;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-weight: bold;
-  font-size: <?php echo isset($data['fontsize'])?$data['fontsize']:18; ?>px;
-  font-family: arial, helvetica;
-  width: 600px;
+  font-size: <?php echo $data['fontsize']?$data['fontsize']:18; ?>px;
+  font-family: <?php echo $data['font-family']?$data['font-family']:'arial, helvetica'; ?>;
+  max-width: 600px;
+  width: 100%;
   margin: 50px auto;
   text-align: center;
 }	
 
+ </style><div class="design"><?php echo $data['name']?$data['name']:'I Love My India';
 
- </style><span class="design"><?php echo isset($data['name'])?$data['name']:'Simple Design'; ?></span><?php
 
+  }
 }
-
-
-
-}
+?>
